@@ -8,21 +8,8 @@ import {
   TableHead,
   TableRow,
   TableSortLabel,
-  Paper,
-  Box
+  Paper
 } from '@mui/material';
-import { styled } from '@mui/system';
-
-const StyledTableContainer = styled(TableContainer)({
-  maxWidth: '80%',
-  margin: 'auto',
-  border: '1px solid #ccc',
-  boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-});
-
-const StyledTableCell = styled(TableCell)({
-  border: '1px solid #ccc',
-});
 
 function CSVTable() {
   const [data, setData] = useState([]);
@@ -64,36 +51,34 @@ function CSVTable() {
   });
 
   return (
-    <Box mt={4}>
-      <StyledTableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            {columns.map((column) => (
+              <TableCell key={column}>
+                <TableSortLabel
+                  active={orderBy === column}
+                  direction={orderBy === column ? order : 'asc'}
+                  onClick={() => handleSortRequest(column)}
+                >
+                  {column}
+                </TableSortLabel>
+              </TableCell>
+            ))}
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {sortedData.map((row, index) => (
+            <TableRow key={index}>
               {columns.map((column) => (
-                <StyledTableCell key={column}>
-                  <TableSortLabel
-                    active={orderBy === column}
-                    direction={orderBy === column ? order : 'asc'}
-                    onClick={() => handleSortRequest(column)}
-                  >
-                    {column}
-                  </TableSortLabel>
-                </StyledTableCell>
+                <TableCell key={column}>{row[column]}</TableCell>
               ))}
             </TableRow>
-          </TableHead>
-          <TableBody>
-            {sortedData.map((row, index) => (
-              <TableRow key={index}>
-                {columns.map((column) => (
-                  <StyledTableCell key={column}>{row[column]}</StyledTableCell>
-                ))}
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </StyledTableContainer>
-    </Box>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }
 
