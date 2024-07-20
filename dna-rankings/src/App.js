@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import CSVTable from './CSVTable';
+// import CSVTable from './CSVTable';
+import CSVReader from './CSVReader';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         </a>
       </header> */}
       <h1>DNA synthesizers</h1>
-      <CSVTable />
+      {/* <CSVTable /> */}
+      <CSVReader />
     </div>
   );
 }
