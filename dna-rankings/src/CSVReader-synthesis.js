@@ -1,13 +1,13 @@
-// with nav
+// src/CSVReader.js
 import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
 import Table from './Table';
 
-const CSVReader = ({ fileName }) => {
+const CSVReader = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`/${fileName}`)
+    fetch('/DNA synthesis.csv')
       .then((response) => response.text())
       .then((text) => {
         Papa.parse(text, {
@@ -17,7 +17,7 @@ const CSVReader = ({ fileName }) => {
           },
         });
       });
-  }, [fileName]);
+  }, []);
 
   return (
     <div>
