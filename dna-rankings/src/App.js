@@ -1,9 +1,10 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 // import CSVTable from './CSVTable';
 import CSVReader from './CSVReader';
 import Navbar from './Navbar';
+import Overview from './Overview';
 
 // function App() {
 //   return (
@@ -15,15 +16,31 @@ import Navbar from './Navbar';
 //     </div>
 //   );
 // }
+// const App = () => {
+//   const files = ['DNA synthesis.csv', 'DNA sequencing.csv'];
+//   const [currentFile, setCurrentFile] = useState(files[0]);
+
+//   return (
+//     <div className="App">
+//       <h1>DNA Rankings</h1>
+//       <Navbar files={files} currentFile={currentFile} setCurrentFile={setCurrentFile} />
+//       <CSVReader fileName={currentFile} />
+//     </div>
+//   );
+// };
 const App = () => {
   const files = ['DNA synthesis.csv', 'DNA sequencing.csv'];
-  const [currentFile, setCurrentFile] = useState(files[0]);
+  const [currentFile, setCurrentFile] = useState('Overview');
 
   return (
     <div className="App">
       <h1>DNA Rankings</h1>
       <Navbar files={files} currentFile={currentFile} setCurrentFile={setCurrentFile} />
-      <CSVReader fileName={currentFile} />
+      {currentFile === 'Overview' ? (
+        <Overview />
+      ) : (
+        <CSVReader fileName={currentFile} />
+      )}
     </div>
   );
 };

@@ -62,3 +62,20 @@ nav button {
 nav button:hover {
   text-decoration: underline;
 }
+
+/*  */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ecf0f1;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+}
