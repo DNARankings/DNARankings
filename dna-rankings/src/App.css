@@ -69,6 +69,8 @@ body {
   background-color: #ecf0f1;
   margin: 0;
   padding: 0;
+  padding-left: 2%; 
+  padding-right: 2%;
 }
 
 .App {
