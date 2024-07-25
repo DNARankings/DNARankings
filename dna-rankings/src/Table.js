@@ -7,10 +7,39 @@ const Table = ({ data }) => {
   const columns = useMemo(
     () =>
       data.length > 0
-        ? Object.keys(data[0]).map((key) => ({
-            Header: key,
-            accessor: key,
-          }))
+    // 将原本的将csv中的Source列和Link列合并成一个超链接，并且只显示带超链接的Source（不显示单独的url）
+        ? Object.keys(data[0]).filter((key) => key !== 'Link').map((key) => {
+          if(key === 'Source'){
+            return {
+              Header: key,
+              accessor: key,
+              Cell: ({ row }) => (
+                <a href={row.original['Link']} target="_blank" rel="noopener noreferrer">
+                  {row.original['Source']}
+                </a>
+              )
+            };
+          }
+          // else if(key === 'Link'){
+          //   return {
+          //     // Header: key,
+          //     // accessor: key,
+          //   }
+          // }
+          else{
+            return {
+              Header: key,
+              accessor: key,
+            }
+          }
+        }
+        
+          
+          // ({
+          //   Header: key,
+          //   accessor: key,
+          // })
+        )
         : [],
     [data]
   );
