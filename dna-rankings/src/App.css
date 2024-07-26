@@ -69,6 +69,7 @@ body {
   background-color: #ecf0f1;
   margin: 0;
   padding: 0;
+  /* 控制左右留白部分，可以适当多一点？ */
   padding-left: 2%; 
   padding-right: 2%;
 }

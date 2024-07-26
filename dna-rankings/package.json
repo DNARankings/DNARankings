@@ -2,6 +2,7 @@
   "name": "dna-rankings",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dnarankings.github.io/DNARankings/",
   "dependencies": {
     "@emotion/react": "^11.12.0",
     "@emotion/styled": "^11.11.5",
@@ -13,6 +14,7 @@
     "react": "^18.3.1",
     "react-csv-reader": "^4.0.0",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
     "react-table": "^7.8.0",
     "web-vitals": "^2.1.4"
@@ -21,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
