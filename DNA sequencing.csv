@@ -1,0 +1,3 @@
+﻿Equipment(细分型号?),Company,载片数/Run,Lane/载片,支持读长,有效reads数/载片,最大数据产出/Run（通量？）,运行时间,载片类型（？）,Source,测序质量（？）
+DNBSEQ-T20×2RS,华大智造,6,1,"PE100, PE150","40B (PE100, PE150)",72Tb,60h(PE100) ~ 80h(PE150),Slide,https://www.mgi-tech.com/products/instruments_info/44/,
+DNBSEQ-T10×4RS,华大智造,8,1,"PE100, PE150","45B (PE100), 32B (PE150)",76.8Tb,96h(PE100) ~ 106h(PE150),Slide,https://www.mgi-tech.com/products/instruments_info/39/,
