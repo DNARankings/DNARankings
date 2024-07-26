@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DNARankings/static/css/main.2f13dd0e.css",
-    "main.js": "/DNARankings/static/js/main.ee856c8d.js",
+    "main.js": "/DNARankings/static/js/main.3bc55d1a.js",
     "static/js/453.69a71c88.chunk.js": "/DNARankings/static/js/453.69a71c88.chunk.js",
     "index.html": "/DNARankings/index.html",
     "main.2f13dd0e.css.map": "/DNARankings/static/css/main.2f13dd0e.css.map",
-    "main.ee856c8d.js.map": "/DNARankings/static/js/main.ee856c8d.js.map",
+    "main.3bc55d1a.js.map": "/DNARankings/static/js/main.3bc55d1a.js.map",
     "453.69a71c88.chunk.js.map": "/DNARankings/static/js/453.69a71c88.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f13dd0e.css",
-    "static/js/main.ee856c8d.js"
+    "static/js/main.3bc55d1a.js"
   ]
 }
