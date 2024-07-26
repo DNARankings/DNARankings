@@ -1,4 +1,4 @@
-# DNARankings-frontend
+# DNARankings
 
 ## 组件
 使用 `papaparse` 来解析csv文件。尝试过 `react-table` 、 `Material-UI` 来展示表格。
