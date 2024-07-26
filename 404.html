@@ -1,0 +1,13 @@
+
+<!-- 配置 GitHub Pages 重定向
+GitHub Pages 默认不支持 SPA 的路由，所以需要一个 404.html 文件来进行重定向。
+
+在 public 目录下创建一个 404.html 文件，并添加以下内容： -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/%PUBLIC_URL%/index.html">
+  </head>
+</html>
+
+<!-- 这将确保所有未匹配的路径都重定向到 index.html，从而由 React Router 来处理。 -->
