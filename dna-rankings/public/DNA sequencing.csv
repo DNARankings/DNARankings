@@ -1,3 +1,14 @@
-﻿Equipment(细分型号?),Company,载片数/Run,Lane/载片,支持读长,有效reads数/载片,最大数据产出/Run（通量？）,运行时间,载片类型（？）,Source,测序质量（？）
-DNBSEQ-T20×2RS,华大智造,6,1,"PE100, PE150","40B (PE100, PE150)",72Tb,60h(PE100) ~ 80h(PE150),Slide,https://www.mgi-tech.com/products/instruments_info/44/,
-DNBSEQ-T10×4RS,华大智造,8,1,"PE100, PE150","45B (PE100), 32B (PE150)",76.8Tb,96h(PE100) ~ 106h(PE150),Slide,https://www.mgi-tech.com/products/instruments_info/39/,
+﻿Equipment(细分型号?),Company,并行度,Lane/载片,支持读长,有效reads数/载片,连续读取长度(CRL),最大数据产出/Run（通量？）,运行时间（总时间/平均时间）,载片类型（？）,类型,Source,Link,测序质量（？）
+DNBSEQ-T20×2RS,华大智造,6,1,"PE100, PE150","40B (PE100, PE150)",,72Tb,60h(PE100) ~ 80h(PE150),Slide,第2代,product,https://www.mgi-tech.com/products/instruments_info/44/,
+DNBSEQ-T10×4RS,华大智造,8,1,"PE100, PE150","45B (PE100), 32B (PE150)",,76.8Tb,96h(PE100) ~ 106h(PE150),Slide,第2代,product,https://www.mgi-tech.com/products/instruments_info/39/,
+NextSeq 2000/2000-CN,illumina,,,2*300bp（即PE300？）,100M-1.8B(单端),,540Gb(,8-44h,,第2代,product,https://www.illumina.com.cn/systems/sequencing-platforms/nextseq-1000-2000/specifications.html,
+DS3000,HITACHI,4,,,,"(QV20) 600(快速), 700(标准)",,≤32min(快速); ≤60min(标准),,第1代（毛细管电泳）,product,https://www.hitachi-hightech.com/cn/zhcn/products/healthcare/diagnosis/life-science/capillary-electrophoresis-sequencers/ds3000.html,
+SeqStudio,thermofisher,4,,,,,,,,第1代,product,https://www.thermofisher.cn/cn/zh/home/life-science/sequencing/sanger-sequencing/genetic-analyzers/models/seqstudio.html,
+SeqStudio Flex,thermofisher,"8, 24",,,,,,,,第1代,product,https://www.thermofisher.cn/cn/zh/home/life-science/sequencing/sanger-sequencing/genetic-analyzers/models/seqstudio-flex.html,
+3500基因分析仪,thermofisher,8,,,,,,,,第1代,product,https://www.thermofisher.cn/order/catalog/product/4405673?SID=srch-srp-4405673,
+3500xL基因分析仪,thermofisher,24,,,,,,,,第1代,product,https://www.thermofisher.cn/order/catalog/product/4405633?SID=srch-srp-4405633,
+3730xl DNA分析仪,thermofisher,"48, 96",,,,,,,,第1代,product,https://www.thermofisher.cn/order/catalog/product/A41046?SID=srch-srp-A41046,
+Ion GeneStudio S5,thermofisher,,,,,,15 Gb/天（一块Ion540芯片）,19 小时（Ion 540 芯片）,,第2代（芯片？）,,,
+Ion GeneStudio S5 Plus,thermofisher,,,,,,30 Gb/天（两块Ion540芯片）,10 小时（Ion 540 芯片）；11.5小时（Ion 550 芯片）,,第2代,,,
+Ion GeneStudio S5 Prime,thermofisher,,,,,,50 Gb/天（两块Ion540芯片）,6.5 小时（Ion  540 芯片）；8.5小时（Ion  550 芯片）  ,,第2代,,,
+,,,,,,,,,,,,,
