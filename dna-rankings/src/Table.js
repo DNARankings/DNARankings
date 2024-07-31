@@ -1,5 +1,5 @@
 // src/Table.js
-import React, { useMemo } from 'react';
+import React, { useMemo , useState } from 'react';
 import { useTable, useSortBy } from 'react-table';
 import './Table.css';
 
@@ -20,12 +20,16 @@ const Table = ({ data }) => {
               )
             };
           }
-          // else if(key === 'Link'){
-          //   return {
-          //     // Header: key,
-          //     // accessor: key,
-          //   }
-          // }
+          else if(key === '备注'){
+            return {
+              Header: key,
+              accessor: key,
+              Cell: ({ value }) => (
+                <RemarkCell remark={value} />
+              ),
+              // width: 400,
+            }
+          }
           else{
             return {
               Header: key,
@@ -33,7 +37,6 @@ const Table = ({ data }) => {
             }
           }
         }
-        
           
           // ({
           //   Header: key,
@@ -85,6 +88,48 @@ const Table = ({ data }) => {
         })}
       </tbody>
     </table>
+  );
+};
+
+
+// 备注列
+const RemarkCell = ({ remark }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ position: 'relative', cursor: 'pointer', 
+        maxWidth: '2000px', 
+        width: '250%',
+        // overflow: 'hidden', 
+        // textOverflow: 'ellipsis', 
+        // whiteSpace: 'nowrap' 
+      }}
+    >
+      {/* 备注内容只在悬停时显示 */}
+      {isHovered && (
+        <div style={{
+          position: 'absolute',
+          backgroundColor: 'white',
+          border: '1px solid #ccc',
+          padding: '5px',
+          zIndex: 1,
+          whiteSpace: 'normal',
+          // maxWidth: '3000px', // 最大宽度
+          wordWrap: 'break-word', // 允许换行
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // 阴影
+          borderRadius: '4px', // 圆角
+          left: -20, // 确保备注框在左侧
+          top: '100%', // 确保备注框在单元格下方
+        }}>
+          {remark ? remark : '无'}
+        </div>
+      )}
+      {/* 表格内的内容保持不变 */}
+      <span style={{ visibility: isHovered ? 'hidden' : 'visible'}}>&nbsp;&nbsp;💡&nbsp;&nbsp;</span>
+    </div>
   );
 };
 
