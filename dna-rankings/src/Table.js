@@ -102,6 +102,7 @@ const RemarkCell = ({ remark }) => {
       onMouseLeave={() => setIsHovered(false)}
       style={{ position: 'relative', cursor: 'pointer', 
         maxWidth: '2000px', 
+        // 设置宽度为250%，使得一行不会太短
         width: '250%',
         // overflow: 'hidden', 
         // textOverflow: 'ellipsis', 
@@ -128,7 +129,8 @@ const RemarkCell = ({ remark }) => {
         </div>
       )}
       {/* 表格内的内容保持不变 */}
-      <span style={{ visibility: isHovered ? 'hidden' : 'visible'}}>&nbsp;&nbsp;💡&nbsp;&nbsp;</span>
+      {/* 调整大小 */}
+      <span style={{ visibility: isHovered ? 'hidden' : 'visible', fontSize:'90%'}}>&nbsp;&nbsp;&nbsp;💡&nbsp;&nbsp;&nbsp;</span>
     </div>
   );
 };
