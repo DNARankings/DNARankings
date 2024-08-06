@@ -1,4 +1,4 @@
-﻿Equipment(细分型号?),Company,通量,Cycle time,Total run time,Length,Type,Source,Link,(合成规模？效率？）,estimated latency
+﻿Equipment,Company,通量,Cycle time,Total run time,Length,Type,Source,Link,(合成规模？效率？）,estimated latency
 Dr.Oligo 12/48/192XLc/768XLc,Biolytic,<=768,6min40s for 384 columns; 9min45s for 768 columns;,2h13min for 384 oligos(20mers)； 3h15min for 768 oligos(20mers);,20 mers,Column-based,product,https://www.biolytic.com/c-699-oligo-synthesizers.aspx,,
 Syn-HCY-12P,TSINGKE,12,<=6min,<=2h,>120mer,Column-based,product,https://www.tsingke.com.cn/intel/compose12,,
 Syn-HCY-192P/B,TSINGKE,192,4-6.5min,,,Column-based,product,https://www.tsingke.com.cn/intel/compose192,,
