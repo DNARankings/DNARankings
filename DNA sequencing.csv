@@ -1,4 +1,4 @@
-﻿Equipment(细分型号?),Company,载片数或毛细管数(并行数?),Lane/载片,支持读长,有效reads数,连续读取长度(CRL),最大数据产出/Run（通量？）,运行时间（总时间/平均时间）,载片类型（？）,类型,Source,Link,测序质量 (?,备注
+﻿Equipment,Company,载片数或毛细管数(并行数?),Lane/载片,支持读长,有效reads数,连续读取长度(CRL),最大数据产出/Run（通量？）,运行时间（总时间/平均时间）,载片类型（？）,类型,Source,Link,测序质量 (?,备注
 DNBSEQ-T20×2RS,华大智造,6,1,"PE100, PE150","40B/载片 (PE100, PE150)",,72Tb,60h(PE100) ~ 80h(PE150),Slide,第2代,product,https://www.mgi-tech.com/products/instruments_info/44/,,
 DNBSEQ-T10×4RS,华大智造,8,1,"PE100, PE150","45B/载片 (PE100), 32B (PE150)",,76.8Tb,96h(PE100) ~ 106h(PE150),Slide,第2代,product,https://www.mgi-tech.com/products/instruments_info/39/,,
 NextSeq 2000/2000-CN,illumina,,,2*300bp（即PE300？）,100M-1.8B(单端),,540Gb(,8-44h,,第2代,product,https://www.illumina.com.cn/systems/sequencing-platforms/nextseq-1000-2000/specifications.html,,
