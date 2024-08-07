@@ -1,7 +1,7 @@
 ﻿Equipment,Company,载片数或毛细管数(并行数?),Lane/载片,支持读长,有效reads数,连续读取长度(CRL),最大数据产出/Run（通量？）,运行时间（总时间/平均时间）,类型,Source,Link,测序质量 (?,备注
 DNBSEQ-T20×2RS,华大智造,6,1,"PE100, PE150","40B/载片 (PE100, PE150)",,72Tb,60h(PE100) ~ 80h(PE150),第2代,product,https://www.mgi-tech.com/products/instruments_info/44/,,
 DNBSEQ-T10×4RS,华大智造,8,1,"PE100, PE150","45B/载片 (PE100), 32B (PE150)",,76.8Tb,96h(PE100) ~ 106h(PE150),第2代,product,https://www.mgi-tech.com/products/instruments_info/39/,,
-iSeq,illumina,,,2*150bp,4M(单端),,1.2Gb,9.5-19h,第2代,product,https://www.illumina.com.cn/systems/sequencing-platforms/iseq.html,,read数为单端时的数据，双端则翻倍
+iSeq 100,illumina,,,2*150bp,4M(单端),,1.2Gb,9.5-19h,第2代,product,https://www.illumina.com.cn/systems/sequencing-platforms/iseq.html,,read数为单端时的数据，双端则翻倍
 MiniSeq,illumina,,,2*150bp,8-25M,,7.5Gb,4-24h,第2代,product,https://www.illumina.com.cn/systems/sequencing-platforms/miniseq.html,,read数为单端时的数据，双端则翻倍
 MiSeq,illumina,,,2*300bp,1-25M,,15Gb,4-56h,第2代,product,https://www.illumina.com.cn/systems/sequencing-platforms/miseq.html,,read数为单端时的数据，双端则翻倍
 NextSeq 550,illumina,,,2*150bp,400M,,120Gb,12-30h,第2代,product,https://www.illumina.com.cn/systems/sequencing-platforms/nextseq.html,,read数为单端时的数据，双端则翻倍
