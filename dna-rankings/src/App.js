@@ -59,7 +59,7 @@ const GitHubCorner = () => (
   </a>
 );
 const App = () => {
-  const files = ['DNA synthesis.csv', 'DNA sequencing.csv'];
+  const files = ['DNA synthesis.csv', 'DNA sequencing.csv', 'DNA codec.csv'];
   const [currentFile, setCurrentFile] = useState('Overview');
 
   return (
