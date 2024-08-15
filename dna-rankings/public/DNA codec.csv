@@ -1,11 +1,16 @@
-﻿scheme,Year,Source,Link
-Church et.al.,2012,paper,https://www.science.org/doi/10.1126/science.1226355
-Goldman et.al.,2013,paper,https://www.nature.com/articles/nature11875
-Blawat et.al.,2016,paper,https://www.sciencedirect.com/science/article/pii/S1877050916308742?via%3Dihub
-Grass et.al.,2015,paper,https://onlinelibrary.wiley.com/doi/10.1002/anie.201411378
-Fountain code,2017,paper,https://www.science.org/doi/10.1126/science.aaj2038
-"Random access, Organick et,al.",2018,paper,https://www.nature.com/articles/nbt.4079
-Yin-yang codec,2022,paper,https://www.nature.com/articles/s43588-022-00231-2
-DNA-Aeon,2023,paper,https://www.nature.com/articles/s41467-023-36297-3
-LDPC,2019,paper,https://ieeexplore.ieee.org/document/8849814/
-HEDGES,2020,paper,https://pnas.org/doi/full/10.1073/pnas.2004821117
+﻿Scheme,Information density (bits/nt),GC content (%) of sequences,Maximum homopolymer length (nt),Error correction strategy,Error types,Year,Source,Link
+Church et.al.,1,2.5–100,3,No,,2012,paper,https://www.science.org/doi/10.1126/science.1226355
+Goldman et.al.,1.58,22.5–82.5,1,Repetition,,2013,paper,https://www.nature.com/articles/nature11875
+Blawat et.al.,,,,,,2016,paper,https://www.sciencedirect.com/science/article/pii/S1877050916308742?via%3Dihub
+Grass et.al.,1.78,12.5–100,3,RS,"Substitutions, strand erasures",2015,paper,https://onlinelibrary.wiley.com/doi/10.1002/anie.201411378
+Bornholt et.al.,,,,,,2016,paper,https://dl.acm.org/doi/10.1145/2872362.2872397
+Fountain code,1.98,40–60,4,"Inner RS, outer fountain (Luby transform)","Substitutions, strand erasures, indels",2017,paper,https://www.science.org/doi/10.1126/science.aaj2038
+"Random access, Organick et,al.",,,,,,2018,paper,https://www.nature.com/articles/nbt.4079
+Yin-yang codec,1.95,40–60,4,RS,,2022,paper,https://www.nature.com/articles/s43588-022-00231-2
+DNA-Aeon,,,,"Inner AC based, outer fountain (Raptor)","Substitution, strand erasures, indels",2023,paper,https://www.nature.com/articles/s41467-023-36297-3
+LDPC,,,,,,2019,paper,https://ieeexplore.ieee.org/document/8849814/
+HEDGES,,,,"Inner hash based, outer RS","Substitutions, strand erasures, indels",2020,paper,https://pnas.org/doi/full/10.1073/pnas.2004821117
+Yazdi et.al. (?),,,,,,2018,paper,
+Huffman tree,,,,,,2020,paper,https://ieeexplore.ieee.org/document/9082611
+Degenerate base,,,,,,2019,paper,https://www.nature.com/articles/s41598-019-43105-w
+Composite base(?),,,,,,2019,paper,https://www.nature.com/articles/s41587-019-0240-x
