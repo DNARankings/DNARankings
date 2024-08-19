@@ -1,6 +1,7 @@
 // src/Table.js
 import React, { useMemo , useState } from 'react';
 import { useTable, useSortBy } from 'react-table';
+import { Tooltip } from 'react-tooltip';
 import './Table.css';
 
 const Table = ({ data }) => {
@@ -30,6 +31,49 @@ const Table = ({ data }) => {
               // width: 400,
             }
           }
+          // 使用脚注：
+          // else if (key === '最大数据产出/Run') {
+          //   return {
+          //     Header: () => (
+          //       <div>
+          //         {key} <sup>1</sup>
+          //       </div>
+          //     ),
+          //     accessor: key,
+          //   }
+          // }
+          // else if (key === 'Estimated throughput (MB/S)') {
+          //   return {
+          //     Header: () => (
+          //       <div>
+          //         {key} <sup>2</sup>
+          //       </div>
+          //     ),
+          //     accessor: key,
+          //   }
+          // }
+          // 使用tooltip：
+          else if (key === '最大数据产出/Run') {
+            return {
+              Header: () => (
+                <div data-tooltip-id="tooltip" data-tooltip-content='表格中的 "Tb" 表示 "Terabase"。"Gb" 同理。'>
+                  {key} <span style={{ cursor: 'pointer' }}><sup>①</sup></span>
+                </div>
+              ),
+              accessor: key,
+            }
+          }
+          else if (key === 'Estimated throughput (MB/S)') {
+            return {
+              Header: () => (
+                <div data-tooltip-id="tooltip" data-tooltip-content="Estimated throughput中每个碱基按照 2 bits 计算。">
+                  {key} <span style={{ cursor: 'pointer' }}><sup>②</sup></span>
+                </div>
+              ),
+              accessor: key,
+            }
+          }
+          
           else{
             return {
               Header: key,
@@ -56,6 +100,7 @@ const Table = ({ data }) => {
   } = useTable({ columns, data }, useSortBy);
 
   return (
+  <div>
     <table {...getTableProps()} className="table">
       <thead>
         {headerGroups.map((headerGroup) => (
@@ -88,6 +133,9 @@ const Table = ({ data }) => {
         })}
       </tbody>
     </table>
+    
+    <Tooltip id="tooltip" place="top" type="dark" effect="solid" />
+  </div>
   );
 };
 

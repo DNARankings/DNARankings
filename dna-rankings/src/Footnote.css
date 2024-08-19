@@ -1,0 +1,27 @@
+.footnote {
+	display: flex;
+	justify-content: space-between;
+	/* padding: 0px; */
+	/* border-top: 1px solid #ccc; */
+	/* position: fixed; */
+	/* bottom: 0; */
+	width: 100%;
+	/* background-color: #f9f9f9; */
+  }
+  
+  .footnote-left {
+	/* margin-left: 20px; */
+	/* style={{ textAlign: 'left', fontSize: '0.8em', color: '#666', marginTop: '10px' }} */
+	text-align: left;
+	font-size: 0.8em;
+	color: #666;
+	margin-top: 8px;
+  }
+  
+  .footnote-right {
+	/* margin-right: 20px; */
+	/* style={{ textAlign: 'right', fontSize: '0.9em', marginTop: '10px' }} */
+	text-align: right;
+	font-size: 0.9em;
+	margin-top: 5px;
+  }
