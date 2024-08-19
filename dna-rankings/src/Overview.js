@@ -4,10 +4,10 @@ const Overview = () => {
   return (
     <div>
       <h2>...................................</h2>
-      <p>About DNA synthesizers and sequencers.</p>
-      <p>
+      <p>About DNA synthesizers, DNA sequencers, and DNA codec.</p>
+      {/* <p>
         test github actions to deploy
-      </p>
+      </p> */}
     </div>
   );
 };
