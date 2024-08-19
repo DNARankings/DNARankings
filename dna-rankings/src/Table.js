@@ -66,7 +66,7 @@ const Table = ({ data }) => {
           else if (key === 'Estimated throughput (MB/S)') {
             return {
               Header: () => (
-                <div data-tooltip-id="tooltip" data-tooltip-content="Estimated throughput中每个碱基按照 2 bits 计算，1Tb=1000Gb。">
+                <div data-tooltip-id="tooltip" data-tooltip-content="Estimated throughput中每个碱基按照 2 bits 计算；1Tbase=1000Gbase。">
                   {key} <span style={{ cursor: 'pointer' }}><sup>②</sup></span>
                 </div>
               ),

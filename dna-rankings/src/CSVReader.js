@@ -38,7 +38,7 @@ const CSVReader = ({ fileName }) => {
               {/* <p>注：表格中的 "Tb" 表示 "Terabase" 而非 "Terabyte" 或 "Terabit"。"Gb" 同理。</p> */}
               {/* <p><sup>1</sup> 表格中的 "Tb" 表示 "Terabase" 而非 "Terabyte" 或 "Terabit"。"Gb" 同理。</p> */}
               <p style={{margin:1}}><sup>①</sup> 表格中的 "Tb" 表示 "Terabase"。"Gb" 同理。</p>
-              <p style={{margin:1}}><sup>②</sup> Estimated throughput中，将每个碱基按照 2 bits 计算，1Tb=1000Gb。</p>
+              <p style={{margin:1}}><sup>②</sup> Estimated throughput中，将每个碱基按照 2 bits 计算；1Tbase=1000Gbase。</p>
             </footer> : null
           }
         </div>
