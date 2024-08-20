@@ -1,16 +1,17 @@
-﻿Scheme,Input data/Data stored (Mbyte),Information density/Coding potential (bits/nt),Physical density(PB/g),GC content (%) of sequences,Maximum homopolymer length (nt),Error correction strategy,Error types,Redundancy,Year,Source,Link
-Church et.al.,0.65,1,1.28(In vitro),2.5–100,3,No,,1,2012,paper,https://www.science.org/doi/10.1126/science.1226355
-Goldman et.al.,0.75,1.58,2.25(In vitro),22.5–82.5,1,Repetition,,4,2013,paper,https://www.nature.com/articles/nature11875
-Blawat et.al.,22,,,,,,,1.13,2016,paper,https://www.sciencedirect.com/science/article/pii/S1877050916308742?via%3Dihub
-Grass et.al.,0.08,1.78,(diff?)0.005/25,12.5–100,3,RS,"Substitutions, strand erasures",1,2015,paper,https://onlinelibrary.wiley.com/doi/10.1002/anie.201411378
-Bornholt et.al.,0.15,,,,,,,1.5,2016,paper,https://dl.acm.org/doi/10.1145/2872362.2872397
-Fountain code,2.15,1.98,,40–60,4,"Inner RS, outer fountain (Luby transform)","Substitutions, strand erasures, indels",1.07,2017,paper,https://www.science.org/doi/10.1126/science.aaj2038
-"Random access, Organick et,al.",200,,,,,,,,2018,paper,https://www.nature.com/articles/nbt.4079
-Yin-yang codec,0.25,1.95,2250(In vitro),40–60,4,RS,,,2022,paper,https://www.nature.com/articles/s43588-022-00231-2
-DNA-Aeon,,,,,,"Inner AC based, outer fountain (Raptor)","Substitution, strand erasures, indels",,2023,paper,https://www.nature.com/articles/s41467-023-36297-3
-LDPC,,,,,,,,,2019,paper,https://ieeexplore.ieee.org/document/8849814/
-HEDGES,,,,,,"Inner hash based, outer RS","Substitutions, strand erasures, indels",,2020,paper,https://pnas.org/doi/full/10.1073/pnas.2004821117
-Yazdi et.al. (?),,,,,,,,,2018,paper,
-Huffman tree,,,,,,,,,2020,paper,https://ieeexplore.ieee.org/document/9082611
-Degenerate base,,,,,,,,,2019,paper,https://www.nature.com/articles/s41598-019-43105-w
-Composite base(?),6.42,,,,,,,,2019,paper,https://www.nature.com/articles/s41587-019-0240-x
+﻿Scheme,Input data/Data stored (Mbyte),Information density/Coding potential (bits/nt),Physical density(PB/g),Net information density/Information capacity(Pb/g),Full recovery,Realized capacity(Net information density/Shannon Capacity),Number of oligos,GC content (%) of sequences,Maximum homopolymer length (nt),Error correction strategy,Error types,Redundancy,Random access,Year,Source,Link
+Church et.al.,0.65,1,1.28(In vitro),0.83,No,45%,,2.5–100,3,No,,1,No,2012,paper,https://www.science.org/doi/10.1126/science.1226355
+Goldman et.al.,0.75,1.58,2.25(In vitro),0.33,No,18%,,22.5–82.5,1,Repetition,,4,No,2013,paper,https://www.nature.com/articles/nature11875
+Blawat et.al.,22,1.6,,0.92,Yes,50%,,,,,,1.13,No,2016,paper,https://www.sciencedirect.com/science/article/pii/S1877050916308742?via%3Dihub
+Grass et.al.,0.08,1.78,(diff?)0.005/25,1.14,Yes,62%,,12.5–100,3,RS,"Substitutions, strand erasures",1,No,2015,paper,https://onlinelibrary.wiley.com/doi/10.1002/anie.201411378
+Bornholt et.al.,0.15,1.58,,0.88,No,48%,,,,,,1.5,Yes,2016,paper,https://dl.acm.org/doi/10.1145/2872362.2872397
+Fountain code,2.15,1.98,214,1.57,Yes,86%,,40–60,4,"Inner RS, outer fountain (Luby transform)","Substitutions, strand erasures, indels",1.07,No,2017,paper,https://www.science.org/doi/10.1126/science.aaj2038
+"Random access, Organick et,al.",200.2,,,,,,,,,,,,Yes,2018,paper,https://www.nature.com/articles/nbt.4079
+Yin-yang codec,0.25,1.95,2250(In vitro),,,,,40–60,4,RS,,,,2022,paper,https://www.nature.com/articles/s43588-022-00231-2
+DNA-Aeon,,,,,,,,,,"Inner AC based, outer fountain (Raptor)","Substitution, strand erasures, indels",,,2023,paper,https://www.nature.com/articles/s41467-023-36297-3
+LDPC,,,,,,,,,,,,,,2019,paper,https://ieeexplore.ieee.org/document/8849814/
+HEDGES,,,,,,,,,,"Inner hash based, outer RS","Substitutions, strand erasures, indels",,,2020,paper,https://pnas.org/doi/full/10.1073/pnas.2004821117
+Yazdi et.al. (?),,,,,,,,,,,,,Yes,2016,paper,https://www.nature.com/articles/s41598-017-05188-1
+Huffman tree,,,,,,,,,,,,,,2020,paper,https://ieeexplore.ieee.org/document/9082611
+Degenerate base,"0.135; 0.000854(# of char=6, 15)",,772; 490,2; 3.37(bits/char),,,4503; 45,,,,,,,2019,paper,https://www.nature.com/articles/s41598-019-43105-w
+Composite base(?),6.42,,,,,,,,,,,,,2019,paper,https://www.nature.com/articles/s41587-019-0240-x
+Polar codes,,,,,,,,,,,,,,2021,paper,https://ieeexplore.ieee.org/document/9517755/
