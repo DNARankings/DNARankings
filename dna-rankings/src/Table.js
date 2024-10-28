@@ -9,7 +9,48 @@ const Table = ({ data }) => {
     () =>
       data.length > 0
     // 将原本的将csv中的Source列和Link列合并成一个超链接，并且只显示带超链接的Source（不显示单独的url）
-        ? Object.keys(data[0]).filter((key) => key !== 'Link').map((key) => {
+        ? Object.keys(data[0]).filter(
+          (key) => 
+            // 过滤掉一些列，不显示在表格中
+            key !== 'Link' && 
+            key !== 'estimated latency(s)' && key !== '# of bases(mer)' && 
+            key !== 'Lane/载片' && key !== '连续读取长度(CRL)' && key !== '测序质量' &&
+            key !== 'Number of oligos'
+        ).map((key) => {
+          // 自定义排序函数，将空值排在最后
+          const customSortType = (rowA, rowB, columnId, desc) => {
+            // Extract number from string
+            const extractNumber = (value) => {
+              if (typeof value !== 'string') return 999;
+              // const match = value.match(/^\d+/);
+              const match = value.match(/^\d+(\.\d+)?/);
+              // 非数字开头的字符串，把值设为999（使其尽量不排在第一个
+              return match ? parseFloat(match[0]) : 999;
+            };
+            const a = rowA.values[columnId];
+            const b = rowB.values[columnId];
+            const aValue = extractNumber(a);
+            const bValue = extractNumber(b);          
+            
+            // a、b是否为空
+            const aIsEmpty = a === undefined || a === null || a === '';
+            const bIsEmpty = b === undefined || b === null || b === '';
+          
+            if (aIsEmpty && bIsEmpty) return 0;
+            if (desc) {
+              if (aIsEmpty) return -1;
+              if (bIsEmpty) return 1;
+              // return b > a ? 1 : -1;
+              return bValue > aValue ? -1 : 1;
+            }
+            else {  // Ascending
+              if (aIsEmpty) return 1;
+              if (bIsEmpty) return -1;
+              // return a > b ? -1 : 1;
+              return aValue > bValue ? 1 : -1;
+            }
+
+          };
           if(key === 'Source'){
             return {
               Header: key,
@@ -18,7 +59,8 @@ const Table = ({ data }) => {
                 <a href={row.original['Link']} target="_blank" rel="noopener noreferrer">
                   {row.original['Source']}
                 </a>
-              )
+              ),
+              sortType: customSortType,
             };
           }
           else if(key === '备注'){
@@ -29,6 +71,7 @@ const Table = ({ data }) => {
                 <RemarkCell remark={value} />
               ),
               // width: 400,
+              sortType: customSortType,
             }
           }
           // 使用脚注：
@@ -53,31 +96,33 @@ const Table = ({ data }) => {
           //   }
           // }
           // 使用tooltip：
-          else if (key === '最大数据产出/Run') {
+          else if (key === '最大数据产出（单次运行）') {
             return {
               Header: () => (
                 <div data-tooltip-id="tooltip" data-tooltip-content='表格中的 "Tb" 表示 "Terabase"。"Gb" 同理。'>
-                  {key} <span style={{ cursor: 'pointer' }}><sup>①</sup></span>
+                  {key} <span style={{ cursor: 'pointer' }}><sup>②</sup></span>
                 </div>
               ),
               accessor: key,
+              sortType: customSortType,
             }
           }
           else if (key === 'Estimated throughput (MB/S)') {
             return {
               Header: () => (
                 <div data-tooltip-id="tooltip" data-tooltip-content="Estimated throughput中每个碱基按照 2 bits 计算；1Tbase=1000Gbase。">
-                  {key} <span style={{ cursor: 'pointer' }}><sup>②</sup></span>
+                  {key} <span style={{ cursor: 'pointer' }}><sup>①</sup></span>
                 </div>
               ),
               accessor: key,
+              sortType: customSortType,
             }
           }
-          
           else{
             return {
               Header: key,
               accessor: key,
+              sortType: customSortType,
             }
           }
         }
@@ -100,7 +145,7 @@ const Table = ({ data }) => {
   } = useTable({ columns, data }, useSortBy);
 
   return (
-  <div>
+  <div className='table-container'>
     <table {...getTableProps()} className="table">
       <thead>
         {headerGroups.map((headerGroup) => (

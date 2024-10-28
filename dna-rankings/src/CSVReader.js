@@ -37,8 +37,13 @@ const CSVReader = ({ fileName }) => {
             <footer>
               {/* <p>注：表格中的 "Tb" 表示 "Terabase" 而非 "Terabyte" 或 "Terabit"。"Gb" 同理。</p> */}
               {/* <p><sup>1</sup> 表格中的 "Tb" 表示 "Terabase" 而非 "Terabyte" 或 "Terabit"。"Gb" 同理。</p> */}
-              <p style={{margin:1}}><sup>①</sup> 表格中的 "Tb" 表示 "Terabase"。"Gb" 同理。</p>
-              <p style={{margin:1}}><sup>②</sup> Estimated throughput中，将每个碱基按照 2 bits 计算；1Tbase=1000Gbase。</p>
+              <p style={{margin:1}}><sup>①</sup> Estimated throughput中，将每个碱基按照 2 bits 计算；1Tbase=1000Gbase。</p>
+              <p style={{margin:1}}><sup>②</sup> 表格中的 "Tb" 表示 "Terabase"。"Gb" 同理。</p>
+            </footer> : fileName === 'DNA synthesis.csv' ? 
+            // <footer style={{ textAlign: 'right', fontSize: '0.9em', color: '#666', marginTop: '10px' }}>
+            // <footer style={{ textAlign: 'left', fontSize: '0.8em', color: '#666', marginTop: '10px' }}>
+            <footer>
+              <p style={{margin:1}}><sup>①</sup> Estimated throughput中，将每个碱基按照 2 bits 计算。</p>
             </footer> : null
           }
         </div>

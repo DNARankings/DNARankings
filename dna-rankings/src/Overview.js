@@ -4,6 +4,7 @@ const Overview = () => {
   return (
     <div>
       <h2>...................................</h2>
+      {/* <h2>About DNA synthesizers, DNA sequencers, and DNA codec.</h2> */}
       <p>About DNA synthesizers, DNA sequencers, and DNA codec.</p>
       {/* <p>
         test github actions to deploy
