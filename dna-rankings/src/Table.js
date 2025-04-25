@@ -118,6 +118,17 @@ const Table = ({ data }) => {
               sortType: customSortType,
             }
           }
+          else if (key === 'Estimated throughput (Bytes/Sec)') {
+            return {
+              Header: () => (
+                <div data-tooltip-id="tooltip" data-tooltip-content="Estimated throughput中每个碱基按照 2 bits 计算；1Tbase=1000Gbase。">
+                  {key} <span style={{ cursor: 'pointer' }}><sup>①</sup></span>
+                </div>
+              ),
+              accessor: key,
+              sortType: customSortType,
+            }
+          }
           else{
             return {
               Header: key,
